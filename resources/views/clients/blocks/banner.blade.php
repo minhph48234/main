@@ -1,38 +1,11 @@
-<!-- Navbar & Hero Start -->
-    <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0">
-                <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>Tourist</h1>
-                <!-- <img src="img/logo.png" alt="Logo"> -->
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
-                    <a href="{{route('about')}}" class="nav-item nav-link">About</a>
-                    <a href="{{route('service')}}" class="nav-item nav-link">Services</a>
-                    <a href="{{route('destination')}}" class="nav-item nav-link">Destination</a>
-                    <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
-                </div>
-                <a href="https://htmlcodex.com/downloading/?item=2111" class="btn btn-primary rounded-pill py-2 px-4">Buy Pro Version</a>
-            </div>
-        </nav>
-
-        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
-            <div class="container py-5">
-                <div class="row justify-content-center py-5">
-                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
-                        <h1 class="display-3 text-white mb-3 animated slideInDown">Enjoy Your Vacation With Us</h1>
-                        <p class="fs-4 text-white mb-4 animated slideInDown">Tempor erat elitr rebum at clita diam amet diam et eos erat ipsum lorem sit</p>
-                        <div class="position-relative w-75 mx-auto animated slideInDown">
-                            <input class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Eg: Thailand">
-                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">Search</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="relative h-[500px] flex items-center justify-center text-white">
+    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073" class="absolute inset-0 w-full h-full object-cover brightness-50" alt="Banner">
+    <div class="relative z-10 text-center space-y-6 px-4">
+        <h2 class="text-5xl font-bold leading-tight">Khám Phá Thế Giới Theo Cách Của Bạn</h2>
+        <p class="text-xl opacity-90">Hàng ngàn tour du lịch giá tốt đang chờ đón bạn</p>
+        <div class="max-w-3xl mx-auto bg-white p-2 rounded-full shadow-2xl flex text-slate-800">
+            <input type="text" placeholder="Bạn muốn đi đâu?" class="flex-1 px-6 py-3 rounded-full outline-none">
+            <button class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition">Tìm kiếm</button>
         </div>
     </div>
-    <!-- Navbar & Hero End -->
+</section>

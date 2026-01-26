@@ -1,86 +1,91 @@
-@include('clients.blocks.header')
-@include('clients.blocks.banner')
-   <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
-                <h1 class="mb-5">Contact For Any Query</h1>
+@extends('layouts.client')
+
+@section('title', 'Liên hệ với TravelGo')
+
+@section('content')
+<div class="bg-slate-50 min-h-screen py-16">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-extrabold text-slate-900 mb-4">Liên hệ với chúng tôi</h1>
+            <p class="text-slate-500 max-w-2xl mx-auto italic">
+                Bạn có câu hỏi hay cần tư vấn về hành trình sắp tới? Đừng ngần ngại liên hệ với đội ngũ TravelGo.
+            </p>
+            <div class="w-20 h-1.5 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 bg-white rounded-3xl shadow-sm p-8 md:p-10 border border-slate-100">
+                <h2 class="text-2xl font-bold text-slate-800 mb-6">Gửi tin nhắn cho chúng tôi</h2>
+                <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    @csrf
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-slate-700">Họ và tên</label>
+                        <input type="text" placeholder="Nguyễn Văn A" 
+                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-bold text-slate-700">Email</label>
+                        <input type="email" placeholder="example@gmail.com" 
+                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                    </div>
+                    <div class="space-y-2 md:col-span-2">
+                        <label class="text-sm font-bold text-slate-700">Chủ đề</label>
+                        <input type="text" placeholder="Tư vấn tour Phú Quốc" 
+                               class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                    </div>
+                    <div class="space-y-2 md:col-span-2">
+                        <label class="text-sm font-bold text-slate-700">Lời nhắn</label>
+                        <textarea rows="5" placeholder="Hãy cho chúng tôi biết yêu cầu của bạn..." 
+                                  class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+                    </div>
+                    <div class="md:col-span-2">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition duration-300 shadow-lg shadow-blue-200 w-full md:w-auto">
+                            Gửi yêu cầu ngay <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h5>Get In Touch</h5>
-                    <h6 class="mb-4">Receive messages instantly with our PHP and Ajax contact form - available in the <a href="https://htmlcodex.com/downloading/?item=2111">Pro Version</a> only.</h6>
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
-                            <i class="fa fa-map-marker-alt text-white"></i>
+
+            <div class="space-y-6">
+                <div class="bg-white rounded-3xl shadow-sm p-8 border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6">Thông tin chi tiết</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-800">Địa chỉ</p>
+                                <p class="text-slate-500 text-sm">Số 1 Trịnh Văn Bô, Nam Từ Liêm, Hà Nội</p>
+                            </div>
                         </div>
-                        <div class="ms-3">
-                            <h5 class="text-primary">Office</h5>
-                            <p class="mb-0">123 Street, New York, USA</p>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-800">Điện thoại</p>
+                                <p class="text-slate-500 text-sm">0123 456 789</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h5 class="text-primary">Mobile</h5>
-                            <p class="mb-0">+012 345 67890</p>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
-                            <i class="fa fa-envelope-open text-white"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h5 class="text-primary">Email</h5>
-                            <p class="mb-0">info@example.com</p>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-800">Email</p>
+                                <p class="text-slate-500 text-sm">contact@travelgo.com</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <iframe class="position-relative rounded w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
-                </div>
-                <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
+
+                <div class="bg-white rounded-3xl shadow-sm overflow-hidden h-64 border border-slate-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.8639311820666!2d105.74459841540243!3d21.038129792833243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x536c053530f28a30!2zSOG7jWMgdmnhu4duIEPDtG5nIG5naOG7hyBCxrB1IGNowaW5oIFZp4buFbiB0aMO0bmcgKFAp!5e0!3m2!1svi!2s!4v1640000000000!5m2!1svi!2s" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
-
-@include('clients.blocks.footer')
+</div>
+@endsection

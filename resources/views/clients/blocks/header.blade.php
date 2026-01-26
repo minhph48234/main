@@ -1,54 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b">
+    <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold text-blue-600">TRAVEL<span class="text-orange-500">GO</span></a>
+        
+        <nav class="hidden md:flex space-x-8 font-medium">
+            <a href="{{ route('home') }}" class="hover:text-blue-600 transition">Trang chủ</a>
+            <a href="/destinations" class="hover:text-blue-600 transition">Điểm đến</a>
+            <a href="/services" class="hover:text-blue-600 transition">Dịch vụ</a>
+            <a href="/about" class="hover:text-blue-600 transition">Giới thiệu</a>
+            <a href="/contact" class="hover:text-blue-600 transition">Liên hệ</a> 
+        </nav>
 
-<head>
-    <meta charset="utf-8">
-    <title>Tourist - Travel </title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="{{asset('img/favicon.ico')}}" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="{{asset('clients/lib/animate/animate.min.css') }}" rel="stylesheet">
-'
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{asset('clients/css/bootstrap.min.css')}}" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="{{asset('clients/css/style.css')}}" rel="stylesheet">
-</head>
-<body>
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
-                </div>
-            </div>
-            <div class="col-lg-4 text-center text-lg-end">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
-                </div>
-            </div>
+        <div class="flex items-center gap-2">
+            <a href="{{ route('admin.login') }}" class="px-5 py-2 rounded-full border border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold transition">
+                Đăng nhập
+            </a>
+            
+            <a href="/register" class="px-5 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 font-semibold shadow-md transition">
+                Đăng ký
+            </a>
         </div>
     </div>
-    <!-- Topbar End -->
+</header>
