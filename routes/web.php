@@ -70,6 +70,3 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::resource('guides', GuideController::class);
 });
 
-// test commit
-// test commit 2
-// test commit 3
