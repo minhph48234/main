@@ -69,3 +69,5 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::resource('users', UserController::class);
     Route::resource('guides', GuideController::class);
 });
+
+// commen 1
